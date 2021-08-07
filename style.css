@@ -2,15 +2,192 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6,a{
     text-transform: uppercase;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+p ,button{
+    font-family:fantasy;
+    font-weight: 400;
 }
 body{
-    background-color:rgb(139, 58, 58)
+    background-color:rgb(47, 40, 40);
+    height: 20000px;
 }
+/*NAVBAR*/
+.navbar{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.navbar img{
+    margin-top: 5px;
+    height: 100px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px red;
+   
+
+}
+.navbar .container{
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .container a{
+   color: azure;
+   font-size: 20px;
+   font-weight: 700;
+}
+.navbar .container a:hover{
+    color: rgb(235, 214, 99);
+ }
+@media (max-width: 740px) {
+    .navbar .container a{
+        font-size: 15px;
+     
+     }
+}
+
+/* SECTION 1*/
 .sec1 .container{
 display:flex;
-align-items:center
+align-items:center;
+max-width: 1500px;
+margin: 0 auto;
+}
+.sec1 .container .left h1{
+    color: azure;
+    font-size: 150px;
+    text-shadow: 0px 0px 30px red;
+}
+.sec1 .container .left h1:hover{
+    color: rgb(235, 214, 99);
+}
+.sec1 .container .left p{
+    color: rgb(199, 235, 235);
+    font-size: 20px;
+    max-width: 900px;
+    font-weight: bold;
+    margin: 30px 10px;
+}
+.sec1 .container .left button{
+    background-color: rgb(235, 214, 99);
+    font-size: 15px;
+    font-weight:700;
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 10px rgb(235, 214, 99);
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+@media (max-width: 1500px) {
+    .sec1 .container .left h1{
+        font-size: 100px;
+    }
+    .sec1 .container .left p{
+        font-size: 15px;
+    }
+    .sec1 .container .left button{
+        width: 150px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .sec1 .container{
+        display:flex;
+        align-items:center;
+        max-width: 900px;
+        margin: 0 auto;
+        }
+}
+
+.right img{
+    margin-top: 200px;
+    width: 500px;
+    height: 700px;
+    border-radius: 200px;
+    box-shadow: 0px 0px 40px red;
+}
+.right img:hover{
+    box-shadow: 0px 0px 90px rgb(235, 214, 99);
+}
+@media (max-width: 1200px) {
+    .sec1 .container{
+        flex-direction: column;
+        margin-top: 150px;
+    }
+    .sec1 .container .left h1{
+        font-size: 50px;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .right img{
+        margin-top: 100px;
+        width: 200px;
+        height: 300px;
+        border-radius: 100px;
+    }
+    .sec1 .container{
+        display:flex;
+        align-items:center;
+        max-width: 600px;
+        margin: 0 auto;
+        }
+}
+
+/* section 2*/
+.sec2 .container{
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.sec2 .big-card .left{
+    width: 600px;
+}
+.sec2 .big-card{
+    color: azure;
+    width: 95%;
+    height: 300px;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0);
+    margin-top: 40px;
+    box-shadow: 0px 0px 20px 10px red;
+    border-radius: 10px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    animation: shadow 2s infinite ease-in-out;
+}
+@keyframes shadow {
+    0%{box-shadow: 0px 0px 20px 0px rgb(235, 214, 99);}
+    50%{box-shadow: 0px 0px 20px 10px red}
+    100%{box-shadow: 0px 0px 20px 0px rgb(235, 214, 99);}
+}
+.sec2 .big-card .left img{
+    height: 200px;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 500px;
+}
+.sec2 .big-card .rigth i{
+color: rgb(235, 214, 99);
+font-size: 80px;
+padding-left:300px;
+margin-top: 50px;
+cursor: pointer;
+
 }
